@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Scale, Mail, MapPin, Phone } from 'lucide-react';
+import { Scale, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -49,7 +49,7 @@ export function Footer() {
             <div className="md:col-span-1"></div>
 
             <div className="md:col-span-4">
-                <h3 className="font-headline text-lg font-semibold mb-4">Our Office</h3>
+                <h3 className="font-headline text-lg font-semibold mb-4">Our Offices</h3>
                 <div className="space-y-3 text-sm text-muted-foreground">
                     <div className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
@@ -64,6 +64,9 @@ export function Footer() {
                         <a href={`tel:${officeDetails.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{officeDetails.phone}</a>
                     </div>
                 </div>
+                <Link href="/contact" className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-4">
+                    More offices <ArrowRight className="h-4 w-4" />
+                </Link>
             </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
