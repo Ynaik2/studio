@@ -1,34 +1,72 @@
 import Link from 'next/link';
-import { Scale } from 'lucide-react';
+import { Scale, Mail, MapPin, Phone } from 'lucide-react';
 
-const navLinks = [
+const quickLinks = [
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/contact', label: 'Contact' },
 ];
 
+const officeDetails = {
+    address: 'A-123, Model Town, Delhi, 110009',
+    phone: '+91 11 2345 6789',
+    email: 'contact@srblaw.com'
+}
+
 export function Footer() {
   return (
-    <footer className="bg-secondary/50">
-      <div className="container mx-auto px-4 py-8 md:py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <Scale className="h-6 w-6 text-primary" />
-            <span className="font-headline text-lg font-bold">SRB Law Partners</span>
-          </div>
-          <nav className="flex gap-4 mb-4 md:mb-0">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+    <footer className="bg-secondary/50 text-secondary-foreground">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="md:col-span-4">
+                <div className="flex items-center gap-2 mb-4">
+                    <Scale className="h-8 w-8 text-primary" />
+                    <span className="font-headline text-2xl font-bold">SRB Law Partners</span>
+                </div>
+                <p className="text-sm text-muted-foreground max-w-sm">
+                    Your Legal Shield Since 1986. Providing expert regulatory, advisory, and dispute resolution services.
+                </p>
+            </div>
+
+            <div className="md:col-span-1"></div>
+
+            <div className="md:col-span-2">
+                <h3 className="font-headline text-lg font-semibold mb-4">Quick Links</h3>
+                <nav className="flex flex-col gap-2">
+                    {quickLinks.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                        {link.label}
+                    </Link>
+                    ))}
+                </nav>
+            </div>
+
+            <div className="md:col-span-1"></div>
+
+            <div className="md:col-span-4">
+                <h3 className="font-headline text-lg font-semibold mb-4">Our Office</h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                    <div className="flex items-start gap-3">
+                        <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
+                        <span>{officeDetails.address}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                        <a href={`mailto:${officeDetails.email}`} className="hover:text-primary transition-colors">{officeDetails.email}</a>
+                    </div>
+                     <div className="flex items-center gap-3">
+                        <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                        <a href={`tel:${officeDetails.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{officeDetails.phone}</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} SRB Law Partners. All Rights Reserved.</p>
         </div>
       </div>

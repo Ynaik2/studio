@@ -57,9 +57,6 @@ export function Header() {
           {navLinks.map((link) => (
             <NavLink key={link.href} href={link.href} label={link.label} />
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/contact">Get In Touch</Link>
-          </Button>
         </nav>
 
         <div className="md:hidden">
