@@ -44,23 +44,27 @@ export default function AboutPage() {
             Meet the dedicated and experienced legal minds at the heart of SRB Law Partners.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        <div className="max-w-4xl mx-auto space-y-8">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="text-center overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1">
-              <div className="aspect-square overflow-hidden">
-                <Image
-                  src={member.imageUrl}
-                  alt={`Portrait of ${member.name}`}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  data-ai-hint={member.aiHint}
-                />
+            <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl md:flex md:items-center">
+              <div className="md:w-1/3">
+                <div className="aspect-square overflow-hidden">
+                  <Image
+                    src={member.imageUrl}
+                    alt={`Portrait of ${member.name}`}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                    data-ai-hint={member.aiHint}
+                  />
+                </div>
               </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
-                <CardDescription className="text-primary font-semibold">{member.specialty}</CardDescription>
-              </CardHeader>
+              <div className="md:w-2/3">
+                <CardHeader>
+                  <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
+                  <CardDescription className="text-primary font-semibold text-base pt-1">{member.specialty}</CardDescription>
+                </CardHeader>
+              </div>
             </Card>
           ))}
         </div>

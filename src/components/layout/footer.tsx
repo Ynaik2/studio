@@ -4,15 +4,15 @@ import Image from 'next/image';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'The Team' },
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/contact', label: 'Contact' },
 ];
 
 const officeDetails = {
-    address: 'A-123, Model Town, Delhi, 110009',
-    phone: '+91 11 2345 6789',
-    email: 'contact@srblaw.com'
+    address: 'House No. 103, Golf Links, New Delhi, 110003',
+    phone: '+91 9810024119',
+    email: 'srblawpartners@gmail.com'
 }
 
 export function Footer() {

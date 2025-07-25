@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'The Team' },
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/contact', label: 'Contact Us' },
 ];
@@ -48,7 +48,7 @@ export function Header() {
         isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-white'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20 md:px-3">
+      <div className="max-w-screen-xl mx-4 flex h-16 items-center justify-between px-2 sm:px-4 md:h-20">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="SRB Law Partners Logo" width={120} height={26} />
         </Link>
