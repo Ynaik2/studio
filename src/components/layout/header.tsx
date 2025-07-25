@@ -50,7 +50,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="SRB Law Partners Logo" width={120} height={26} />
+          <Image src="/logo.png" alt="SRB Law Partners Logo" width={100} height={22} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
