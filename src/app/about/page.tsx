@@ -44,27 +44,25 @@ export default function AboutPage() {
             Meet the dedicated and experienced legal minds at the heart of SRB Law Partners.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-xl mx-auto space-y-8">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl md:flex md:items-center">
-              <div className="md:w-1/3">
-                <div className="aspect-square overflow-hidden">
+            <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl text-center p-6">
+              <div className="flex justify-center mb-4">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
                   <Image
                     src={member.imageUrl}
                     alt={`Portrait of ${member.name}`}
-                    width={400}
-                    height={400}
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
                     data-ai-hint={member.aiHint}
                   />
                 </div>
               </div>
-              <div className="md:w-2/3">
-                <CardHeader>
-                  <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
-                  <CardDescription className="text-primary font-semibold text-base pt-1">{member.specialty}</CardDescription>
-                </CardHeader>
-              </div>
+              <CardHeader className="p-0">
+                <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
+                <CardDescription className="text-primary font-semibold text-base pt-1">{member.specialty}</CardDescription>
+              </CardHeader>
             </Card>
           ))}
         </div>
