@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu, X, Scale } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -49,8 +50,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
         <Link href="/" className="flex items-center gap-2">
-          <Scale className="h-8 w-8 text-primary" />
-          <span className="font-headline text-xl font-bold">SRB Law Partners</span>
+          <Image src="/logo.png" alt="SRB Law Partners Logo" width={180} height={40} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -71,8 +71,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="/" className="flex items-center gap-2">
-                      <Scale className="h-6 w-6 text-primary" />
-                      <span className="font-headline text-lg font-bold">SRB Law</span>
+                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={140} height={32} />
                     </Link>
                   <SheetClose asChild>
                      <Button variant="ghost" size="icon">

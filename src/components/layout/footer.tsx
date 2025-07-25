@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Scale, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -21,11 +22,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-4">
                 <div className="flex items-center gap-2 mb-4">
-                    <Scale className="h-8 w-8 text-primary" />
-                    <span className="font-headline text-2xl font-bold">SRB Law Partners</span>
+                    <Link href="/">
+                      <Image src="/logo.png" alt="SRB Law Partners Logo" width={180} height={40} />
+                    </Link>
                 </div>
                 <p className="text-sm text-muted-foreground max-w-sm">
-                    Your Legal Shield Since 1986. Providing expert regulatory, advisory, and dispute resolution services.
+                    Advocates & Legal Consultants
                 </p>
             </div>
 
