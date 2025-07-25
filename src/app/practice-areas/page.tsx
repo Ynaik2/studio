@@ -2,18 +2,21 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
 const areas = [
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Corporate Restructuring and Insolvency'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Banking and Finance (Securitisation, Asset Reconstruction, consortium banking, Debt Restructuring)'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Corporate Commercial Advisory'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Dispute Resolution and Arbitration'},
+  { imageUrl: '/restructuring.png', title: 'Corporate Restructuring and Insolvency'},
+  { imageUrl: '/banking.jpg', title: 'Banking and Finance (Securitisation, Asset Reconstruction, consortium banking, Debt Restructuring)'},
+  { imageUrl: '/corporate commercial advisory.jpg', title: 'Corporate Commercial Advisory'},
+  { imageUrl: '/Dispute.jpg', title: 'Dispute Resolution and Arbitration'},
   { imageUrl: '/TAX LAW.jpg', title: 'Taxation'},
   { imageUrl: '/EMPLOYMENT LAW.jpg', title: 'Employment Laws'},
   { imageUrl: '/SECURITIES MARKET.jpg', title: 'Securities Law / Capital Market'},
   { imageUrl: '/PROPERTY LAW.jpg', title: 'Property Law'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Consumer Protection Law'},
+  { imageUrl: '/CONSUMER IMAGES.jpg', title: 'Consumer Protection Law'},
   { imageUrl: '/FAMILY LAW.jpg', title: 'Family and Matrimonial Law'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Contract and Insurance Law'},
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Research and Advisory'},
+  { imageUrl: '/contract.jpg', title: 'Contract and Insurance Law'},
+  { imageUrl: '/RESEARCH ADVISORY.jpg', title: 'Research and Advisory'},
+  { imageUrl: '/envo law.jpg', title: 'Environmental Law'},
+  { imageUrl: '/CONSTITUTIONAL LAW.jpg', title: 'Constitutional Law'},
+  { imageUrl: '/iprrr.jpg', title: 'Intellectual Property Rights'},
 ];
 
 export default function PracticeAreasPage() {
@@ -36,7 +39,7 @@ export default function PracticeAreasPage() {
                     alt={area.title}
                     width={64}
                     height={64}
-                    className="transition-transform duration-300 group-hover:scale-110 object-contain"
+                    className="transition-transform duration-300 group-hover:scale-110 object-cover"
                     />
                 </div>
                 <CardTitle className="font-headline text-base leading-tight">{area.title}</CardTitle>
