@@ -48,9 +48,9 @@ export function Header() {
         isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-white'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-2 md:h-20">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="SRB Law Partners Logo" width={100} height={22} />
+          <Image src="/logo.png" alt="SRB Law Partners Logo" width={120} height={26} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
