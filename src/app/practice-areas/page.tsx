@@ -24,24 +24,22 @@ export default function PracticeAreasPage() {
             We offer a comprehensive range of legal services tailored to meet the diverse needs of our clients.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {areas.map((area) => (
-            <Card key={area.title} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl group text-center">
-              <CardContent className="pt-6 flex justify-center items-center">
-                 <div className="relative h-24 w-24">
+            <Card key={area.title} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl group">
+              <CardContent className="p-4 flex items-center gap-4">
+                 <div className="relative h-16 w-16 flex-shrink-0">
                     <Image
                     src={area.imageUrl}
                     alt={area.title}
-                    width={100}
-                    height={100}
+                    width={64}
+                    height={64}
                     className="transition-transform duration-300 group-hover:scale-110 object-contain"
                     data-ai-hint={area.hint}
                     />
                 </div>
+                <CardTitle className="font-headline text-base leading-tight">{area.title}</CardTitle>
               </CardContent>
-              <CardHeader className="pt-2">
-                <CardTitle className="font-headline text-lg h-16">{area.title}</CardTitle>
-              </CardHeader>
             </Card>
           ))}
         </div>
