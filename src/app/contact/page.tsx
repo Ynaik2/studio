@@ -1,49 +1,70 @@
 import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
 
 const contactDetails = [
   {
     icon: <MapPin className="h-6 w-6 text-primary" />,
-    title: 'North Delhi Office',
-    value: 'A-123, Model Town, Delhi, 110009',
-  },
-  {
-    icon: <MapPin className="h-6 w-6 text-primary" />,
     title: 'Central Delhi Office',
-    value: 'B-456, Connaught Place, Delhi, 110001',
+    value: 'House No. 103, Golf Links, New Delhi – 110003',
   },
   {
     icon: <MapPin className="h-6 w-6 text-primary" />,
     title: 'South Delhi Office',
-    value: 'C-789, Saket, Delhi, 110017',
+    value: 'Pocket C, House No. 575, Defence Colony, New Delhi – 110024',
   },
+  {
+    icon: <MapPin className="h-6 w-6 text-primary" />,
+    title: 'North Delhi Office',
+    value: 'Pocket C9, House No. 61, Sector 8, North Extension, Rohini, Delhi - 110085',
+  }
 ];
 
 const contactMethods = [
-    {
-        icon: <Phone className="h-6 w-6 text-primary" />,
-        title: 'Phone',
-        value: '+91 11 2345 6789',
-        href: 'tel:+911123456789'
-    },
-    {
-        icon: <Mail className="h-6 w-6 text-primary" />,
-        title: 'Email',
-        value: 'contact@srblaw.com',
-        href: 'mailto:contact@srblaw.com'
-    }
+  {
+    id: 'phone-1',  
+    icon: <Phone className="h-6 w-6 text-primary" />,
+      title: 'Phone',
+      value: '+91 9810024119',
+      href: 'tel:+919810024119'
+  },
+  {
+    id: 'phone-2',
+    icon: <Phone className="h-6 w-6 text-primary" />,
+    title: 'Phone',
+    value: '+91 8588812905',
+    href: 'tel:+918588812905'
+  },
+  {
+    id: 'email-1',  
+    icon: <Mail className="h-6 w-6 text-primary" />,
+      title: 'Email',
+      value: 'srblawpartners@gmail.com',
+      href: 'mailto:srblawpartners@gmail.com'
+  },
+  {
+    id: 'email-2',
+    icon: <Mail className="h-6 w-6 text-primary" />,
+    title: 'Email',
+    value: 'lawoffices@srblawpartners.com',
+    href: 'mailto:lawoffices@srblawpartners.com'
+  }
 ]
 
 export default function ContactPage() {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="text-center mb-12 md:mb-16">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold">Get In Touch</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We are here to assist you. Reach out to us through any of our offices or send us a message.
-          </p>
+        <div className="relative h-64 w-full mb-12 md:mb-16">
+          <Image
+            src="https://placehold.co/1200x400.png"
+            alt="Contact us banner"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+            data-ai-hint="contact office"
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -70,7 +91,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {contactMethods.map((method) => (
-                   <div key={method.title} className="flex items-start gap-4">
+                   <div key={method.id} className="flex items-start gap-4">
                     <div className="mt-1">{method.icon}</div>
                     <div>
                       <h3 className="font-semibold">{method.title}</h3>

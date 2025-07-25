@@ -2,16 +2,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
 const areas = [
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Corporate Restructuring & Insolvency', hint: 'corporate insolvency' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Banking & Finance', hint: 'banking finance' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Dispute Resolution & Arbitration', hint: 'gavel courtroom' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Employment Law', hint: 'employment contract' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Taxation', hint: 'tax forms' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Capital Markets', hint: 'stock market' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Property Law', hint: 'house keys' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Compliance & Due Diligence', hint: 'legal compliance' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Constitutional Law', hint: 'constitution document' },
-  { imageUrl: 'https://placehold.co/100x100.png', title: 'Matrimonial Law', hint: 'wedding rings' },
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Corporate Restructuring and Insolvency'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Banking and Finance (Securitisation, Asset Reconstruction, consortium banking, Debt Restructuring)'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Corporate Commercial Advisory'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Dispute Resolution and Arbitration'},
+  { imageUrl: '/TAX LAW.jpg', title: 'Taxation'},
+  { imageUrl: '/EMPLOYMENT LAW.jpg', title: 'Employment Laws'},
+  { imageUrl: '/SECURITIES MARKET.jpg', title: 'Securities Law / Capital Market'},
+  { imageUrl: '/PROPERTY LAW.jpg', title: 'Property Law'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Consumer Protection Law'},
+  { imageUrl: '/FAMILY LAW.jpg', title: 'Family and Matrimonial Law'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Contract and Insurance Law'},
+  { imageUrl: 'https://placehold.co/100x100.png', title: 'Research and Advisory'},
 ];
 
 export default function PracticeAreasPage() {
@@ -20,8 +22,8 @@ export default function PracticeAreasPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12 md:mb-16">
           <h1 className="font-headline text-4xl md:text-5xl font-bold">Our Practice Areas</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We offer a comprehensive range of legal services tailored to meet the diverse needs of our clients.
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground text-justify">
+            We have expertise and experience in multiple jurisdictions of Laws. <br/><br/> Our firm has distinct experience in Corporate and General Litigation irrespective of its level and forum, Corporate Consultancy and Alternate Dispute Resolutions (ADR). As far as litigation is concerned, we practice law at every forum and at every possible area of law, which suits the needs and requirements of our clients. Ultimately to serve the client and to secure relief/justice for them within the limits of the law is our core aim. Litigation, Corporate Advisory and Arbitration (ADR) are our key areas of practice. We primarily practice before the Supreme Court of India, High Courts National & State Commissions as well as Tribunals, NCLT across its benches, NCLAT-New Delhi & Arbitrators across the country. We are organized to practice in all varieties of law fields including civil law, criminal law, family law, intellectual property rights law, baking and finance law, corporate law, consumer law, competition law, real-estate and infrastructure law, Industrial and labour law, company law, compliances of ROC, incorporation of a company in India and abroad, joint ventures, Insolvency and Bankruptcy (IBC), mergers and amalgamations, acquisitions, debt recovery (DRT), SARFAESI & RDDBFI laws, Service law, election law, administrative law, constitutional law, contract law, cyber law, POCSO, NDPS law, Prevention of Corruption law, Money-Laundering law (PMLA), chit fund, regulations related to RBI & SEBI etc. We provide legal services for individuals as well as for a company/firm, who face any number of legal hurdles, falling under any field of law. Our main agenda is to help our clients to easily walk through the trials of their lives with our guidance.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -35,20 +37,12 @@ export default function PracticeAreasPage() {
                     width={64}
                     height={64}
                     className="transition-transform duration-300 group-hover:scale-110 object-contain"
-                    data-ai-hint={area.hint}
                     />
                 </div>
                 <CardTitle className="font-headline text-base leading-tight">{area.title}</CardTitle>
               </CardContent>
             </Card>
           ))}
-        </div>
-        <div className="mt-16 md:mt-24 text-center">
-            <Card className="max-w-4xl mx-auto p-8 bg-secondary/50 border-primary border-l-4">
-                <p className="text-lg md:text-xl font-semibold text-foreground">
-                “We represent clients across all legal forums including the Supreme Court, various High Courts, National Company Law Tribunals (NCLT), Debt Recovery Tribunals (DRT), and through Arbitration Panels nationwide.”
-                </p>
-            </Card>
         </div>
       </div>
     </div>
