@@ -49,7 +49,7 @@ export default function AboutPage() {
             Meet the dedicated and experienced legal minds at the heart of SRB Law Partners.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto space-y-8">
+        <div className="mx-auto space-y-8">
           {teamMembers.map((member) => (
             <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl text-center p-6 md:p-8">
               <div className="flex justify-center mb-4">
