@@ -49,8 +49,8 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} />
+        <Link href="/" className="flex items-center gap-2 py-2">
+          <Image src="/logo.png" alt="SRB Law Partners Logo" width={130} height={28} />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -70,8 +70,8 @@ export function Header() {
             <SheetContent side="right" className="w-[280px]">
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center p-4 border-b">
-                   <Link href="/" className="flex items-center gap-2">
-                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={140} height={31} />
+                   <Link href="/" className="flex items-center gap-2" >
+                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={130} height={28} />
                     </Link>
                   <SheetClose asChild>
                      <Button variant="ghost" size="icon">

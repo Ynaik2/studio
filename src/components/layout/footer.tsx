@@ -22,16 +22,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-4">
                 <div className="flex items-center gap-2 mb-4">
-                    <Link href="/">
+                    <Link href="/" >
                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} />
                     </Link>
                 </div>
-                <p className="text-sm text-muted-foreground max-w-sm">
-                    Advocates & Legal Consultants
-                </p>
             </div>
-
-            <div className="md:col-span-1"></div>
 
             <div className="md:col-span-2">
                 <h3 className="font-headline text-lg font-semibold mb-4">Quick Links</h3>
