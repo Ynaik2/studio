@@ -1,18 +1,17 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Landmark, Gavel, Users, Calculator, TrendingUp, Home, ClipboardCheck, Scale, HeartHandshake } from 'lucide-react';
-import type { ReactNode } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 
 const areas = [
-  { icon: <Briefcase className="h-8 w-8 text-primary" />, title: 'Corporate Restructuring & Insolvency' },
-  { icon: <Landmark className="h-8 w-8 text-primary" />, title: 'Banking & Finance' },
-  { icon: <Gavel className="h-8 w-8 text-primary" />, title: 'Dispute Resolution & Arbitration' },
-  { icon: <Users className="h-8 w-8 text-primary" />, title: 'Employment Law' },
-  { icon: <Calculator className="h-8 w-8 text-primary" />, title: 'Taxation' },
-  { icon: <TrendingUp className="h-8 w-8 text-primary" />, title: 'Capital Markets' },
-  { icon: <Home className="h-8 w-8 text-primary" />, title: 'Property Law' },
-  { icon: <ClipboardCheck className="h-8 w-8 text-primary" />, title: 'Compliance & Due Diligence' },
-  { icon: <Scale className="h-8 w-8 text-primary" />, title: 'Constitutional Law' },
-  { icon: <HeartHandshake className="h-8 w-8 text-primary" />, title: 'Matrimonial Law' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Corporate Restructuring & Insolvency', hint: 'corporate insolvency' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Banking & Finance', hint: 'banking finance' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Dispute Resolution & Arbitration', hint: 'gavel courtroom' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Employment Law', hint: 'employment contract' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Taxation', hint: 'tax forms' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Capital Markets', hint: 'stock market' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Property Law', hint: 'house keys' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Compliance & Due Diligence', hint: 'legal compliance' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Constitutional Law', hint: 'constitution document' },
+  { imageUrl: 'https://placehold.co/400x300.png', title: 'Matrimonial Law', hint: 'wedding rings' },
 ];
 
 export default function PracticeAreasPage() {
@@ -27,9 +26,20 @@ export default function PracticeAreasPage() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {areas.map((area) => (
-            <Card key={area.title} className="flex flex-col items-center justify-center text-center p-6 h-48 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary">
-              <div className="mb-4">{area.icon}</div>
-              <h2 className="font-headline text-lg font-semibold">{area.title}</h2>
+            <Card key={area.title} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl group">
+              <div className="relative h-48">
+                <Image
+                  src={area.imageUrl}
+                  alt={area.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-110"
+                  data-ai-hint={area.hint}
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-headline text-lg h-16">{area.title}</CardTitle>
+              </CardHeader>
             </Card>
           ))}
         </div>
