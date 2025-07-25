@@ -55,18 +55,16 @@ const contactMethods = [
 export default function ContactPage() {
   return (
     <div className="bg-background">
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="relative h-64 w-full mb-12 md:mb-16">
+        <div className="relative h-64 md:h-96 w-full mb-12 md:mb-16">
           <Image
-            src="https://placehold.co/1200x400.png"
+            src="/WEBSITE G.jpg"
             alt="Contact us banner"
             layout="fill"
             objectFit="cover"
-            className="rounded-lg"
-            data-ai-hint="contact office"
+            className=""
           />
         </div>
-
+      <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           <div className="space-y-8">
             <Card>
