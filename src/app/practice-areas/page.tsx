@@ -37,8 +37,7 @@ export default function PracticeAreasPage() {
                     <Image
                     src={area.imageUrl}
                     alt={area.title}
-                    width={64}
-                    height={64}
+                    layout="fill"
                     className="transition-transform duration-300 group-hover:scale-110 object-cover"
                     />
                 </div>
