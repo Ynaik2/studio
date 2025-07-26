@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://placehold.co/1800x1000.png"
+          src="/20250726_181656.jpg"
           alt="Law office interior"
           layout="fill"
           objectFit="cover"
