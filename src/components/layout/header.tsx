@@ -48,7 +48,7 @@ export function Header() {
         isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-white'
       )}
     >
-      <div className="flex h-16 items-center justify-between px-4 sm:px-8 md:h-20">
+      <div className="flex h-16 items-center justify-between px-4 sm:px-16 md:h-20">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="SRB Law Partners Logo" width={120} height={26} />
         </Link>
