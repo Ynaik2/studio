@@ -41,7 +41,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12">
           <h1 className="font-headline text-4xl md:text-5xl font-bold">About Us</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-5xl mx-auto text-lg text-muted-foreground">
           Our team is a mix of well qualified and experienced lawyers, chartered accountants and management consultations joining hands to work together with a high degree of professionalism and responsiveness.
           </p>
         </div>
