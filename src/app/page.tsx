@@ -8,16 +8,18 @@ import type { ReactNode } from 'react';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-        <Image
-          src="/20250726_181656.jpg"
-          alt="Law office interior"
-          layout="fill"
-          objectFit="contain"
-          className="absolute inset-0 z-0 brightness-100"
-          data-ai-hint="law office interior"
-        />
-        <div className="relative z-10 flex flex-col items-center px-4">
+      <section className="relative w-full">
+        <div className="relative w-full" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
+          <Image
+            src="/20250726_181656.jpg"
+            alt="Law office interior"
+            layout="fill"
+            objectFit="contain"
+            className="absolute inset-0 z-0"
+            data-ai-hint="law office interior"
+          />
+        </div>
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
         </div>
       </section>
       
