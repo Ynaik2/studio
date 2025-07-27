@@ -29,13 +29,13 @@ export function Footer() {
             </div>
 
             <div className="md:col-span-2">
-                <h3 className="font-headline text-xl font-semibold mb-4">Quick Links</h3>
+                <h3 className="font-headline text-2xl font-semibold mb-4">Quick Links</h3>
                 <nav className="flex flex-col gap-2">
                     {quickLinks.map((link) => (
                     <Link
                         key={link.href}
                         href={link.href}
-                        className="text-base text-muted-foreground transition-colors hover:text-primary"
+                        className="text-lg text-muted-foreground transition-colors hover:text-primary"
                     >
                         {link.label}
                     </Link>
@@ -46,8 +46,8 @@ export function Footer() {
             <div className="md:col-span-1"></div>
 
             <div className="md:col-span-4">
-                <h3 className="font-headline text-xl font-semibold mb-4">Our Offices</h3>
-                <div className="space-y-3 text-base text-muted-foreground">
+                <h3 className="font-headline text-2xl font-semibold mb-4">Our Offices</h3>
+                <div className="space-y-3 text-lg text-muted-foreground">
                     <div className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                         <span>{officeDetails.address}</span>
@@ -61,12 +61,12 @@ export function Footer() {
                         <a href={`tel:${officeDetails.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{officeDetails.phone}</a>
                     </div>
                 </div>
-                <Link href="/contact" className="inline-flex items-center gap-1 text-base text-primary hover:underline mt-4">
+                <Link href="/contact" className="inline-flex items-center gap-1 text-lg text-primary hover:underline mt-4">
                     More offices <ArrowRight className="h-4 w-4" />
                 </Link>
             </div>
         </div>
-        <div className="mt-12 border-t pt-8 text-center text-base text-muted-foreground">
+        <div className="mt-12 border-t pt-8 text-center text-lg text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} SRB Law Partners. All Rights Reserved. Developed by Yashas Naik</p>
         </div>
       </div>
