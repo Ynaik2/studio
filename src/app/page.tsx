@@ -9,13 +9,14 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section className="relative w-full">
-        <div className="relative w-full" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
+        <div className="w-full">
           <Image
             src="/20250726_181656.jpg"
             alt="Law office interior"
-            layout="fill"
-            objectFit="contain"
-            className="absolute inset-0 z-0"
+            layout="responsive"
+            width={1920}
+            height={1080}
+            className="w-full h-auto"
             data-ai-hint="law office interior"
           />
         </div>
