@@ -50,7 +50,7 @@ export function Header() {
     >
       <div className="flex h-16 items-center justify-between px-4 sm:px-16 md:h-20">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-10 w-auto md:h-12" />
+          <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-8 w-auto md:h-10" />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -71,7 +71,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="/" className="flex items-center gap-2" >
-                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-10 w-auto" />
+                       <Image src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-8 w-auto" />
                     </Link>
                   <SheetClose asChild>
                      <Button variant="ghost" size="icon">
