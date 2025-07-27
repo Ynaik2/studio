@@ -67,7 +67,7 @@ export function Footer() {
             </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} SRB Law Partners. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SRB Law Partners. All Rights Reserved. Developed by Yashas Naik</p>
         </div>
       </div>
     </footer>
