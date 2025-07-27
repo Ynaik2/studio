@@ -13,22 +13,14 @@ import {
 } from '@/components/ui/alert-dialog';
 
 export function CookieBanner() {
-  const [showDialog, setShowDialog] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem('cookie_consent');
-    if (!consent) {
-      setShowDialog(true);
-    }
-  }, []);
+  const [showDialog, setShowDialog] = useState(true);
 
   const handleAccept = () => {
-    localStorage.setItem('cookie_consent', 'true');
     setShowDialog(false);
   };
 
   return (
-    <AlertDialog open={showDialog}>
+    <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>DISCLAIMER</AlertDialogTitle>
