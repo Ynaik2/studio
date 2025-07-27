@@ -47,7 +47,7 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto space-y-8">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl text-center p-6 md:p-8 border-2 border-primary">
+            <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out text-center p-6 md:p-8 border-2 border-primary hover:border-4">
               <div className="flex justify-center mb-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
                   <Image
