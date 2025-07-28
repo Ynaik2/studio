@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import Image from 'next/image';
+import AppImage from '@/components/AppImage';
 
 const teamMembers = [
   {
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <Card key={member.name} className="overflow-hidden transition-all duration-300 ease-in-out text-center p-6 md:p-8 border-2 border-primary hover:border-4">
               <div className="flex justify-center mb-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20">
-                  <Image
+                  <AppImage
                     src={member.imageUrl}
                     alt={`Portrait of ${member.name}`}
                     width={128}

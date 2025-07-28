@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Scale, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import AppImage from '@/components/AppImage';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -23,7 +23,7 @@ export function Footer() {
             <div className="md:col-span-4">
                 <div className="flex items-center gap-2 mb-4">
                     <Link href="/" >
-                      <Image src="/footer.png" alt="SRB Law Partners Logo" width={225} height={50} className="h-24 w-auto"/>
+                      <AppImage src="/footer.png" alt="SRB Law Partners Logo" width={225} height={50} className="h-24 w-auto"/>
                     </Link>
                 </div>
             </div>

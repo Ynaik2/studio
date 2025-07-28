@@ -1,7 +1,7 @@
 import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import Image from 'next/image';
+import AppImage from '@/components/AppImage';
 
 const contactDetails = [
   {
@@ -56,7 +56,7 @@ export default function ContactPage() {
   return (
     <div className="bg-background">
         <div className="relative h-64 md:h-96 w-full mb-12 md:mb-16">
-          <Image
+          <AppImage
             src="/WEBSITE G.jpg"
             alt="Contact us banner"
             layout="fill"

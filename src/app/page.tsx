@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, Gavel, Landmark, Scale, Shield, Users } from 'lucide-react';
-import Image from 'next/image';
+import AppImage from '@/components/AppImage';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="w-full">
         <div className="w-full">
-          <Image
+          <AppImage
             src="/20250726_181656.jpg"
             alt="Law office interior"
             layout="responsive"

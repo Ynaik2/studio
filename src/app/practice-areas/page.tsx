@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
+import AppImage from '@/components/AppImage';
 
 const areas = [
   { imageUrl: '/restructuring.png', title: 'Corporate Restructuring and Insolvency'},
@@ -34,7 +34,7 @@ export default function PracticeAreasPage() {
             <Card key={area.title} className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl group">
               <CardContent className="p-4 flex items-center gap-4">
                  <div className="relative h-16 w-16 flex-shrink-0">
-                    <Image
+                    <AppImage
                     src={area.imageUrl}
                     alt={area.title}
                     layout="fill"
