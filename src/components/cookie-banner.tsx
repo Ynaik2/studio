@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,23 +12,33 @@ import {
 } from '@/components/ui/alert-dialog';
 
 export function CookieBanner() {
-  const [showDialog, setShowDialog] = useState(true);
+  const [showDialog, setShowDialog] = useState(false);
+
+  useEffect(() => {
+    // Check if the user has already accepted the disclaimer in this session
+    const hasAccepted = sessionStorage.getItem('srb_disclaimer_accepted');
+    if (!hasAccepted) {
+      setShowDialog(true);
+    }
+  }, []);
 
   const handleAccept = () => {
+    // Mark as accepted for the duration of the browser session
+    sessionStorage.setItem('srb_disclaimer_accepted', 'true');
     setShowDialog(false);
   };
 
   return (
     <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
-      <AlertDialogContent>
+      <AlertDialogContent className="max-w-2xl">
         <AlertDialogHeader>
-          <AlertDialogTitle>DISCLAIMER</AlertDialogTitle>
+          <AlertDialogTitle className="text-2xl font-headline text-center">DISCLAIMER</AlertDialogTitle>
           <AlertDialogDescription asChild>
-            <div className="text-sm text-muted-foreground space-y-2 text-justify max-h-[60vh] overflow-y-auto pr-4">
+            <div className="text-sm text-muted-foreground space-y-4 text-justify max-h-[60vh] overflow-y-auto pr-4 mt-4">
                 <p>
                     The rules of the Bar Council of India prohibit law firms from soliciting work or advertising in any manner. By clicking on &apos;I AGREE&apos;, the user acknowledges that:
                 </p>
-                <ul className="list-disc pl-5 space-y-2">
+                <ul className="list-disc pl-5 space-y-3">
                     <li>
                         The user wishes to gain more information about SRB Law Partners, its practice areas and its attorneys, for his/her own information and use;
                     </li>
@@ -46,8 +55,8 @@ export function CookieBanner() {
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogAction onClick={handleAccept} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+        <AlertDialogFooter className="sm:justify-center mt-6">
+          <AlertDialogAction onClick={handleAccept} className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg">
             I AGREE
           </AlertDialogAction>
         </AlertDialogFooter>
