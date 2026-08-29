@@ -23,7 +23,7 @@ export function Footer() {
             <div className="md:col-span-4">
                 <div className="flex items-center gap-2 mb-4">
                     <Link href="/" >
-                      <AppImage src="/footer.png" alt="SRB Law Partners Logo" width={225} height={50} className="h-24 w-auto"/>
+                      <AppImage src="/layout/footer.png" alt="SRB Law Partners Logo" width={225} height={50} className="h-24 w-auto"/>
                     </Link>
                 </div>
             </div>

@@ -50,7 +50,7 @@ export function Header() {
     >
       <div className="flex h-16 items-center justify-between px-4 sm:px-16 md:h-20">
         <Link href="/" className="flex items-center gap-2">
-          <AppImage src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-6 w-auto md:h-8" />
+          <AppImage src="/layout/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-6 w-auto md:h-8" />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -74,7 +74,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center p-4 border-b">
                    <Link href="/" className="flex items-center gap-2" >
-                       <AppImage src="/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-6 w-auto" />
+                       <AppImage src="/layout/logo.png" alt="SRB Law Partners Logo" width={150} height={33} className="h-6 w-auto" />
                     </Link>
                 </div>
                 <nav className="flex flex-col gap-4 p-4">

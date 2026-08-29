@@ -2,21 +2,21 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import AppImage from '@/components/AppImage';
 
 const areas = [
-  { imageUrl: '/restructuring.png', title: 'Corporate Restructuring and Insolvency'},
-  { imageUrl: '/banking.jpg', title: 'Banking and Finance (Securitisation, Asset Reconstruction, consortium banking, Debt Restructuring)'},
-  { imageUrl: '/corporate commercial advisory.jpg', title: 'Corporate Commercial Advisory'},
-  { imageUrl: '/Dispute.jpg', title: 'Dispute Resolution and Arbitration'},
-  { imageUrl: '/TAX LAW.jpg', title: 'Taxation'},
-  { imageUrl: '/EMPLOYMENT LAW.jpg', title: 'Employment Laws'},
-  { imageUrl: '/SECURITIES MARKET.jpg', title: 'Securities Law / Capital Market'},
-  { imageUrl: '/PROPERTY LAW.jpg', title: 'Property Law'},
-  { imageUrl: '/CONSUMER IMAGES.jpg', title: 'Consumer Protection Law'},
-  { imageUrl: '/FAMILY LAW.jpg', title: 'Family and Matrimonial Law'},
-  { imageUrl: '/contract.jpg', title: 'Contract and Insurance Law'},
-  { imageUrl: '/RESEARCH ADVISORY.jpg', title: 'Research and Advisory'},
-  { imageUrl: '/envo law.jpg', title: 'Environmental Law'},
-  { imageUrl: '/CONSTITUTIONAL LAW.jpg', title: 'Constitutional Law'},
-  { imageUrl: '/iprrr.jpg', title: 'Intellectual Property Rights'},
+  { imageUrl: '/practice-areas/restructuring.png', title: 'Corporate Restructuring and Insolvency'},
+  { imageUrl: '/practice-areas/banking.jpg', title: 'Banking and Finance (Securitisation, Asset Reconstruction, consortium banking, Debt Restructuring)'},
+  { imageUrl: '/practice-areas/corporate-commercial-advisory.jpg', title: 'Corporate Commercial Advisory'},
+  { imageUrl: '/practice-areas/dispute.jpg', title: 'Dispute Resolution and Arbitration'},
+  { imageUrl: '/practice-areas/tax-law.jpg', title: 'Taxation'},
+  { imageUrl: '/practice-areas/employment-law.jpg', title: 'Employment Laws'},
+  { imageUrl: '/practice-areas/securities-market.jpg', title: 'Securities Law / Capital Market'},
+  { imageUrl: '/practice-areas/property-law.jpg', title: 'Property Law'},
+  { imageUrl: '/practice-areas/consumer-protection.jpg', title: 'Consumer Protection Law'},
+  { imageUrl: '/practice-areas/family-law.jpg', title: 'Family and Matrimonial Law'},
+  { imageUrl: '/practice-areas/contract.jpg', title: 'Contract and Insurance Law'},
+  { imageUrl: '/practice-areas/research-advisory.jpg', title: 'Research and Advisory'},
+  { imageUrl: '/practice-areas/environmental-law.jpg', title: 'Environmental Law'},
+  { imageUrl: '/practice-areas/constitutional-law.jpg', title: 'Constitutional Law'},
+  { imageUrl: '/practice-areas/intellectual-property.jpg', title: 'Intellectual Property Rights'},
 ];
 
 export default function PracticeAreasPage() {

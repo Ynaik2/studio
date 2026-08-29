@@ -11,7 +11,7 @@ export default function Home() {
       <section className="w-full">
         <div className="w-full">
           <AppImage
-            src="/20250726_181656.jpg"
+            src="/home/office.jpg"
             alt="Law office interior"
             layout="responsive"
             width={1920}

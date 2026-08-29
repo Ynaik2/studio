@@ -8,6 +8,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'SRB Law Partners',
   description: 'SRB Law Partners - Your Legal Shield Since 1986',
+  icons: {
+    icon: '/layout/favicon.png',
+    shortcut: '/layout/favicon.png',
+    apple: '/layout/favicon.png',
+  },
 };
 
 export default function RootLayout({

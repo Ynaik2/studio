@@ -57,7 +57,7 @@ export default function ContactPage() {
     <div className="bg-background">
         <div className="relative h-64 md:h-96 w-full mb-12 md:mb-16">
           <AppImage
-            src="/WEBSITE G.jpg"
+            src="/contact/banner.jpg"
             alt="Contact us banner"
             layout="fill"
             objectFit="cover"
