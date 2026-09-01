@@ -7,7 +7,7 @@ const contactDetails = [
   {
     icon: <MapPin className="h-6 w-6 text-primary" />,
     title: 'Central Delhi Office',
-    value: 'House No. 103, Golf Links, New Delhi – 110003',
+    value: 'No. 103, Golf Links, New Delhi – 110003',
   },
   {
     icon: <MapPin className="h-6 w-6 text-primary" />,

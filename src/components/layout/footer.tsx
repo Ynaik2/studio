@@ -10,9 +10,9 @@ const quickLinks = [
 ];
 
 const officeDetails = {
-    address: 'House No. 103, Golf Links, New Delhi, 110003',
-    phone: '+91 9810024119',
-    email: 'srblawpartners@gmail.com'
+    address: 'No. 103, Golf Links, New Delhi, 110003',
+    phones: ['+91 9810024119', '+91-8588812905'],
+    emails: ['srblawpartners@gmail.com', 'lawoffices@srblawpartners.com']
 }
 
 export function Footer() {
@@ -52,14 +52,18 @@ export function Footer() {
                         <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                         <span>{officeDetails.address}</span>
                     </div>
-                    <div className="flex items-center gap-3">
+                    {officeDetails.emails.map((email) => (
+                    <div key={email} className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                        <a href={`mailto:${officeDetails.email}`} className="hover:text-primary transition-colors">{officeDetails.email}</a>
+                        <a href={`mailto:${email}`} className="hover:text-primary transition-colors">{email}</a>
                     </div>
-                     <div className="flex items-center gap-3">
+                    ))}
+                    {officeDetails.phones.map((phone) => (
+                     <div key={phone} className="flex items-center gap-3">
                         <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                        <a href={`tel:${officeDetails.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{officeDetails.phone}</a>
+                        <a href={`tel:${phone.replace(/[\s-]/g, '')}`} className="hover:text-primary transition-colors">{phone}</a>
                     </div>
+                    ))}
                 </div>
                 <Link href="/contact" className="inline-flex items-center gap-1 text-lg text-primary hover:underline mt-4">
                     More offices <ArrowRight className="h-4 w-4" />
